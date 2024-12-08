@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/sago35/koebiten"
+	tensecgo "github.com/sago35/koebiten/games/10secGo/10secGo"
 	"github.com/sago35/koebiten/games/blocks/blocks"
 	"github.com/sago35/koebiten/games/flappygopher/flappygopher"
 	"github.com/sago35/koebiten/games/jumpingopher/jumpingopher"
@@ -38,6 +39,16 @@ func main() {
 			Game: func() {
 				koebiten.SetRotate(koebiten.Rotation0)
 				game := jumpingopher.NewGame()
+				if err := koebiten.RunGame(game); err != nil {
+					log.Fatal(err)
+				}
+			},
+		},
+		{
+			Title: "10sec Go",
+			Game: func() {
+				koebiten.SetRotate(koebiten.Rotation0)
+				game := tensecgo.NewGame()
 				if err := koebiten.RunGame(game); err != nil {
 					log.Fatal(err)
 				}

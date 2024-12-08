@@ -4,5 +4,6 @@ smoketest: FORCE
 	tinygo build -o ./out/flappygopher.uf2 --target waveshare-rp2040-zero --size short ./games/flappygopher/
 	tinygo build -o ./out/jumpingopher.uf2 --target waveshare-rp2040-zero --size short ./games/jumpingopher/
 	tinygo build -o ./out/blocks.uf2       --target waveshare-rp2040-zero --size short ./games/blocks/
+	tinygo build -o ./out/10secGo.uf2      --target waveshare-rp2040-zero --size short ./games/10secGo/
 
 FORCE:
